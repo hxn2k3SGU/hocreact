@@ -1,0 +1,1 @@
+Component là thư mục chứa những thành phần có thể tái sử dụng lại 

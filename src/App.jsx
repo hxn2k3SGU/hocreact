@@ -1,34 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import MyFooter from "./component/Footer";
+import MyHeader from "./component/Header";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    // react fragment là 1 thẻ cha để bao bọc các thẻ con trong JSX để tránh bị trùng lặp thẻ cha
+    // Để tránh bị thừa một dom
+    <>
+      <MyHeader />
+      <div>Xin chao</div>
+      <MyFooter />
+    </>
+  );
 }
-
-export default App
+export default App;
