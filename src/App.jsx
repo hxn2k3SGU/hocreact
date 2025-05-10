@@ -2,6 +2,8 @@ import Course from "./component/Course";
 import MyFooter from "./component/Footer";
 import MyHeader from "./component/Header";
 import Hello from "./component/Hello";
+import Category from "./component/Category";
+import NonCategory from "./component/Noncategory";
 import Product from "./component/Product";
 
 function App() {
@@ -14,7 +16,7 @@ function App() {
 
   const listProduct = [
     {
-      url:"https://down-vn.img.susercontent.com/file/782c72d99f6755140071726e46e3a047",
+      url: "https://down-vn.img.susercontent.com/file/782c72d99f6755140071726e46e3a047",
       name: "Iphone",
       price: 1000,
     },
@@ -25,18 +27,33 @@ function App() {
     }
   ]
 
-  return (
-  <>
-    {listProduct.map((item, index) => (
-      <Product
-        key={index}
-        url={item.url}
-        name={item.name}
-        price={item.price}
-      />
-    ))}
-  </>
-);
+
+  // Cách render 1 component bằng .map
+  //   return (
+  //   <>
+  //     {listProduct.map((item, index) => (
+  //       <Product
+  //         key={index}
+  //         url={item.url}
+  //         name={item.name}
+  //         price={item.price}
+  //       />
+  //     ))}
+  //   </>
+  // );
+  const isRenderCategory = false
+  if (isRenderCategory) {
+    return (
+      <div> <Category /></div>
+    );
+  } else {
+    return (
+      <div>
+        <NonCategory />
+      </div>
+    );
+  }
+
 
 }
 export default App;
