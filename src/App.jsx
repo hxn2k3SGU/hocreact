@@ -1,3 +1,4 @@
+import Course from "./component/Course";
 import MyFooter from "./component/Footer";
 import MyHeader from "./component/Header";
 import Hello from "./component/Hello";
@@ -11,7 +12,8 @@ function App() {
   }
   return (
     <>
-    <Hello getUserName={getUserName} />
+    {/* <Hello getUserName={getUserName} /> */}
+    <Course />
     </>
   );
 }
