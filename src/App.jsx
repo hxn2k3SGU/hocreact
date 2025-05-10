@@ -2,19 +2,41 @@ import Course from "./component/Course";
 import MyFooter from "./component/Footer";
 import MyHeader from "./component/Header";
 import Hello from "./component/Hello";
+import Product from "./component/Product";
 
 function App() {
-  // Khai báo biến userName
-  const userName ="Hiếu lập trình";
-  // Hàm getUserName trả về giá trị của userName
-  const getUserName = () => {
-    return userName;
-  }
+  // // Khai báo biến userName
+  // const userName ="Hiếu lập trình";
+  // // Hàm getUserName trả về giá trị của userName
+  // const getUserName = () => {
+  //   return userName;
+  // }
+
+  const listProduct = [
+    {
+      url:"https://down-vn.img.susercontent.com/file/782c72d99f6755140071726e46e3a047",
+      name: "Iphone",
+      price: 1000,
+    },
+    {
+      url: "https://down-vn.img.susercontent.com/file/d4e14f20fbcb6e42c2adc631536ca1c9",
+      name: "Samsung",
+      price: 2000,
+    }
+  ]
+
   return (
-    <>
-    {/* <Hello getUserName={getUserName} /> */}
-    <Course />
-    </>
-  );
+  <>
+    {listProduct.map((item, index) => (
+      <Product
+        key={index}
+        url={item.url}
+        name={item.name}
+        price={item.price}
+      />
+    ))}
+  </>
+);
+
 }
 export default App;
