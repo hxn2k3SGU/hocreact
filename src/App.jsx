@@ -176,16 +176,30 @@
 
 // }
 // export default App;
+
 import { useState } from "react";
-import Timer from "./component/Timer";
+import Layoutef from "./component/Layoutef";
+import Ref from "./component/Ref";
+import Stopwatch from "./component/Stopwatch";
+import Memo from "./component/Memo";
 
 function App() {
-  const [show, setShow] = useState(false); 
 
+  const [count, setCount] =  useState(0);
+  
+  console.log("re-render cha");
+  const handleIncrease1 = () =>{
+    setCount(count + 1);
+  }
   return (
     <div>
-      <button onClick={() => setShow(!show)}>Show</button>
-      {show && <Timer />}
+      {/* <Layoutef/> */}
+      {/* <Ref/> */}
+      {/* <Stopwatch/> */}
+      {/* <Memo/> */}
+      <h1>{count}</h1>
+      <button onClick={handleIncrease1}>add</button>
+      <Memo abc = {count}/>
     </div>
   );
 }

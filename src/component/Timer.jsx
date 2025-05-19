@@ -3,6 +3,8 @@ function Timer() {
     const [count, setCount] = useState(0);
     useEffect(() => {
         const timer = setInterval(() => {
+
+            console.log("solanchay");
             setCount(prev => prev + 1);
         }, 1000);
 
